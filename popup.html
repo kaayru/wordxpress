@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="/css/bootstrap.css" rel="stylesheet">
+  <link href="/css/bootstrap-responsive.css" rel="stylesheet">
+  <link href="/css/lordpress.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+	<div id="popup_title">Post to <strong id="destination"></strong></div>
+	
+	<span class="label label-info">Title</span>
+	<div><input id="post_title" type="text"></div>
+    
+    <span class="label label-success">Media</span>
+    <div>
+      <div id="post_image"></div>
+      <div id="post_media"></div>
+    </div>
+    
+	<div id="description_label">
+    <span class="label label-warning">Description</span>
+	</div>
+	<div id="source_btn">
+	<button class="btn btn-mini" type="button">Insert Source</button>
+	</div>
+	
+    <div><textarea id="post_content" rows="3"></textarea></div>
+    
+ 	<span class="label label-important">Category</span>
+	<div>
+	<select id="post_category">
+	</select>
+	</div>   
+    
+    <span class="label label-inverse">Tags</span>
+	<div><input id="post_tags" type="text"></div>
+	
+    <div id="post_button">
+		<button id="btn_post" class="btn btn-large btn-primary"><i id="btn_post_icon" class="icon-plus icon-white"></i> Post your article !</button>
+    </div>
+  </div>
+</body>
+
+<script type="text/javascript" src="/lib/jquery-2.0.1.min.js"></script>
+<script type="text/javascript" src="/lib/jquery.xmlrpc.min.js"></script>
+<script type="text/javascript" src="/lib/jquery-url.js"></script>
+<script type="text/javascript" src="/js/popup.js"></script>
+</html>
