@@ -33,7 +33,8 @@ $(window).ready(function(){
     		$('#destination').html(url);
 
     		if(post_img){$('#post_image').html(post_img);}
-    		if(post_media){$('#post_media').html(post_media);}
+			if(post_media){$('#post_media').html(post_media);}
+			if(current_url){$('#post_source').val(current_url);}
 
     		get_categories();
 
@@ -165,7 +166,8 @@ function post_to_worpress(title, post, selcategory, tagtab, featimgid){
 					comment_status: 'open',
 					post_thumbnail: featimgid,
 					terms: {category: [selcategory]},
-					terms_names : {post_tag: tagtab}
+					terms_names : {post_tag: tagtab},
+					custom_fields: [{"key": "rss_pi_source_url", "value": current_url}]
 					}
 				],
 		success: function(response){
